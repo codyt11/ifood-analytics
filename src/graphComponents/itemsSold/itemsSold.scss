@@ -1,0 +1,12 @@
+.chart-contain {
+  display: flex;
+}
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin: 1em auto;
+  justify-content: space-around;
+  position: relative;
+}

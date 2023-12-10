@@ -1,0 +1,29 @@
+.lengthOfUser {
+  width: 25%;
+  display: flex;
+  border: 1px solid black;
+  box-shadow: 0px 8px 8px black;
+  margin: 0 1em;
+  height: 15em;
+  justify-content: center;
+  .newCustomers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(212, 196, 78);
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    padding: 0.5em;
+    width: 50%;
+  }
+  .change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20, 132, 143);
+    color: #d8d8d8;
+    width: 50%;
+    padding: 1em;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,48 @@
+.head-container {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0px 5px 10px black;
+  margin-bottom: 2em;
+  .logo {
+    font-size: 30px;
+    display: flex;
+    color: #ffff;
+    background-color: rgb(181, 214, 61);
+    justify-content: center;
+    align-items: center;
+    font-family: "Kalnia", serif;
+    width: 10%;
+  }
+  .filter {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .filter-top {
+      background-color: rgb(20, 132, 143);
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5em;
+      .icons {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 20%;
+      }
+      .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(181, 214, 61);
+        border-radius: 10%;
+        width: 50%;
+        height: 75%;
+      }
+    }
+    .filter-bottom {
+      background-color: rgb(212, 196, 78);
+      font-size: 20px;
+    }
+  }
+}
