@@ -56,6 +56,7 @@ function PurchaseBehavior() {
 
   return (
     <div className="pb-pieChart">
+      <h4>Types of Purchases</h4>
       <PieChart width={730} height={250}>
         <Pie
           data={allPurchaseTypes}
@@ -63,13 +64,17 @@ function PurchaseBehavior() {
           nameKey="name"
           cx="50%"
           cy="50%"
-          outerRadius={200}
+          outerRadius={80}
           fill="#8884d8"
         >
           {allPurchaseTypes.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
-          <LabelList dataKey="name" position="inside" />
+          <LabelList
+            dataKey="name"
+            position="outside"
+            style={{ fontSize: "20px", fontWeight: 1200, fill: "#000" }}
+          />
         </Pie>
       </PieChart>
     </div>

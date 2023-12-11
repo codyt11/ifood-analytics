@@ -55,7 +55,7 @@ function FoodPieChart() {
         { name: "Fruits", total: totalMntProducts.mntFruits },
         { name: "Gold", total: totalMntProducts.mntGold },
         { name: "Meat", total: totalMntProducts.mntMeat },
-        { name: "Sweats", total: totalMntProducts.mntSweats },
+        { name: "Sweets", total: totalMntProducts.mntSweats },
         { name: "Wines", total: totalMntProducts.mntWines },
       ]);
     }
@@ -63,6 +63,7 @@ function FoodPieChart() {
 
   return (
     <div className="pieChart">
+      <h4>Products Sold</h4>
       <PieChart width={730} height={250}>
         <Pie
           data={allProducts}
@@ -70,17 +71,17 @@ function FoodPieChart() {
           nameKey="name"
           cx="50%"
           cy="50%"
-          outerRadius={210}
+          outerRadius={80}
           fill="#8884d8"
         >
           {allProducts.map((entry, index) => (
-            <Cell
-              key={`cell-${index}`}
-              fontSize="20px"
-              fill={COLORS[index % COLORS.length]}
-            />
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
-          <LabelList dataKey="name" position="inside" />
+          <LabelList
+            dataKey="name"
+            position="outside"
+            style={{ fontSize: "20px", fontWeight: 1000, fill: "#000" }}
+          />
         </Pie>
       </PieChart>
     </div>

@@ -188,7 +188,7 @@ function ItemsSold() {
       <h4>Products Sold</h4>
       <div className="chart-and-filters">
         <div className="chart">
-          <LineChart width={600} height={300} data={filteredData}>
+          <LineChart width={600} height={375} data={filteredData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="year" />
             <YAxis />
