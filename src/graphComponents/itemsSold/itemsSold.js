@@ -49,6 +49,7 @@ function ItemsSold() {
             parseInt(item.Income) <= maxIncome
         );
       }
+      console.log(processed);
 
       if (selectedAge !== "All Ages") {
         const currentYear = new Date().getFullYear();
@@ -58,13 +59,13 @@ function ItemsSold() {
           (item) => parseInt(item.Year_Birth) === birthYear
         );
       }
-
+      console.log(processed);
       if (selectedEducation !== "All Education Levels") {
         processed = processed.filter(
           (item) => item.Education === selectedEducation
         );
       }
-
+      console.log(processed);
       const aggregatedData = processed.reduce((acc, curr) => {
         const year = curr.Dt_Customer.split("-")[0];
         if (!acc[year]) {
