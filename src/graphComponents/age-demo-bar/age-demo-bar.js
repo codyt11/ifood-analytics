@@ -10,7 +10,6 @@ import {
   Legend,
   BarChart,
   Bar,
-  Label,
 } from "recharts";
 
 function AgeBar() {

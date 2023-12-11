@@ -40,7 +40,7 @@ function ItemsSold() {
       if (selectedIncome !== "All Incomes") {
         const [minIncome, maxIncome] = selectedIncome
           .replace(/\$/g, "")
-          .replace(/\,/g, "")
+          .replace(/,/g, "")
           .split(" - ")
           .map(Number);
         processed = processed.filter(
