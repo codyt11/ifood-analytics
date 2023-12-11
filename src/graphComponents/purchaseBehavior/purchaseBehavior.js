@@ -73,7 +73,7 @@ function PurchaseBehavior() {
           <LabelList
             dataKey="name"
             position="outside"
-            style={{ fontSize: "20px", fontWeight: 1200, fill: "#000" }}
+            style={{ fontSize: "20px", fontWeight: 1000, fill: "#000" }}
           />
         </Pie>
       </PieChart>
