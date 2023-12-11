@@ -10,6 +10,7 @@ import {
   Legend,
   BarChart,
   Bar,
+  Label,
 } from "recharts";
 
 function AgeBar() {
@@ -130,7 +131,11 @@ function AgeBar() {
   };
 
   return (
-    <>
+    <div>
+      <div>
+        <h4>Demographic By Age</h4>
+      </div>
+
       <BarChart
         width={600}
         height={400}
@@ -141,8 +146,9 @@ function AgeBar() {
         <XAxis dataKey="age" tick={<CustomTick />} />
         <YAxis />
         <Tooltip />
+
         <Legend align="right" verticalAlign="top" />
-        <Bar dataKey="count" fill="rgb(181,214,61)" />
+        <Bar dataKey="count" fill="rgb(126,180,45)" />
       </BarChart>
 
       <Dropdown
@@ -150,7 +156,7 @@ function AgeBar() {
         options={ageOptions}
         onOptionSelected={handleAgeRangeChange}
       />
-    </>
+    </div>
   );
 }
 

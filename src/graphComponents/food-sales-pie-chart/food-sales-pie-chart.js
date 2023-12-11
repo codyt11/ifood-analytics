@@ -70,11 +70,15 @@ function FoodPieChart() {
           nameKey="name"
           cx="50%"
           cy="50%"
-          outerRadius={200}
+          outerRadius={210}
           fill="#8884d8"
         >
           {allProducts.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            <Cell
+              key={`cell-${index}`}
+              fontSize="20px"
+              fill={COLORS[index % COLORS.length]}
+            />
           ))}
           <LabelList dataKey="name" position="inside" />
         </Pie>

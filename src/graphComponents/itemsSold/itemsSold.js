@@ -185,54 +185,63 @@ function ItemsSold() {
 
   return (
     <div className="chart-contain">
-      <div className="chart">
-        <LineChart width={600} height={300} data={filteredData}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="year" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="MntWines" stroke="rgb(128,0,0)" />
-          <Line type="monotone" dataKey="MntFruits" stroke="rgb(189,45,0)" />
-          <Line
-            type="monotone"
-            dataKey="MntMeatProducts"
-            stroke="rgb(255,30,0)"
+      <h4>Products Sold</h4>
+      <div className="chart-and-filters">
+        <div className="chart">
+          <LineChart width={600} height={300} data={filteredData}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="year" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Line type="monotone" dataKey="MntWines" stroke="rgb(128,0,0)" />
+            <Line type="monotone" dataKey="MntFruits" stroke="rgb(189,45,0)" />
+            <Line
+              type="monotone"
+              dataKey="MntMeatProducts"
+              stroke="rgb(255,30,0)"
+            />
+            <Line
+              type="monotone"
+              dataKey="MntFishProducts"
+              stroke="rgb(54,81,105)"
+            />
+            <Line
+              type="monotone"
+              dataKey="MntSweetProducts"
+              stroke="rgb(232,140,255)"
+            />
+            <Line
+              type="monotone"
+              dataKey="MntGoldProds"
+              stroke="rgb(112,82,0)"
+            />
+          </LineChart>
+        </div>
+        <div className="filters">
+          <Dropdown
+            className="dropBox"
+            placeHolder="Filter By Income:"
+            options={incomes.map((incomeObj) => incomeObj.income)}
+            onOptionSelected={handleIncomeRangeChange}
           />
-          <Line
-            type="monotone"
-            dataKey="MntFishProducts"
-            stroke="rgb(54,81,105)"
-          />
-          <Line
-            type="monotone"
-            dataKey="MntSweetProducts"
-            stroke="rgb(232,140,255)"
-          />
-          <Line type="monotone" dataKey="MntGoldProds" stroke="rgb(112,82,0)" />
-        </LineChart>
-      </div>
-      <div className="filters">
-        <Dropdown
-          className="dropBox"
-          placeHolder="Filter By Income:"
-          options={incomes.map((incomeObj) => incomeObj.income)}
-          onOptionSelected={handleIncomeRangeChange}
-        />
 
-        <Dropdown
-          className="dropBox"
-          placeHolder="Filter By Age:"
-          options={ages.map((ageObj) => ageObj.age)}
-          onOptionSelected={handleAgeChange}
-        />
+          <Dropdown
+            className="dropBox"
+            placeHolder="Filter By Age:"
+            options={ages.map((ageObj) => ageObj.age)}
+            onOptionSelected={handleAgeChange}
+          />
 
-        <Dropdown
-          className="dropBox"
-          placeHolder="Filter By Education:"
-          options={educationData.map((educationObj) => educationObj.education)}
-          onOptionSelected={handleEducationChange}
-        />
+          <Dropdown
+            className="dropBox"
+            placeHolder="Filter By Education:"
+            options={educationData.map(
+              (educationObj) => educationObj.education
+            )}
+            onOptionSelected={handleEducationChange}
+          />
+        </div>
       </div>
     </div>
   );

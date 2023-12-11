@@ -1,5 +1,17 @@
 .chart-contain {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h4 {
+    text-align: center;
+  }
+  .chart-and-filters {
+    display: flex;
+    align-items: center;
+    .chart {
+      align-items: center;
+    }
+  }
 }
 .filters {
   display: flex;

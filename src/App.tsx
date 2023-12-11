@@ -38,10 +38,6 @@ const App = () => {
         <Head />
       </div>
       <div className="stats">
-        <div className="top-contain">
-          <div className="color"></div>
-          <div className="widgets">WIDGETS</div>
-        </div>
         <div className="graphs">
           <div className="demographics">
             <FontAwesomeIcon icon={faBackwardStep} onClick={prevChart} />

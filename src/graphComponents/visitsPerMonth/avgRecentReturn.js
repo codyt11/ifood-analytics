@@ -33,7 +33,10 @@ function AvgRecentReturn() {
 
   return (
     <div className="recent">
-      <p>Average Recent Return: {avgRecentReturn} Days.</p>
+      <p>
+        Average Recent Return: <span className="days">{avgRecentReturn}</span>{" "}
+        Days.
+      </p>
     </div>
   );
 }

@@ -1,13 +1,16 @@
 .recent {
   width: 23%;
   display: flex;
-  border: 1px solid black;
-  color: #ffff;
-  font-size: 1.5em;
-  box-shadow: 0px 8px 8px black;
-  background-color: rgb(20, 132, 143);
-  height: 10em;
+  color: #000;
+  font-size: 25px;
+  font-weight: 700;
+  box-shadow: 0px 0.5px 5px rgb(212, 212, 212);
+  background-color: #ffff;
+  height: 9.5em;
   margin-left: 1em;
   justify-content: center;
   align-items: center;
+  .days {
+    color: rgb(248, 0, 0);
+  }
 }
